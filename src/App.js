@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import MyKitchen from "./components/MyKitchen";
+import { Jumbotron, Image, Container } from "react-bootstrap";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Jumbotron className="my-kitchen-header">
+        <Image
+          variant="top"
+          src="https://mykitchen-mobile2020-2020.netlify.app/static/media/shop.516b403a.png"
+          width="50"
+          height="50"
+          className="d-inline-block align-top"
+          alt="logo"
+        />
+        <h1 className="d-inline-block">My Kitchen</h1>
+      </Jumbotron>
+      <Container>
+        <MyKitchen className="app p-0" />;
+      </Container>
+    </>
   );
-}
+};
 
 export default App;
